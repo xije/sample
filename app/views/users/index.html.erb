@@ -1,0 +1,31 @@
+<% provide(:title, 'All users') %>
+<h1>All users</h1>
+
+<%= will_paginate %>
+
+<!-- 
+BEFORE RENDERING
+<ul class="users">
+	<li>
+		<% @users.each do |user| %>
+	  		<%= gravatar_for user, size: 52 %>
+	  		<%= link_to user.name, user %>
+  		<% end %>
+	</li>
+</ul> -->
+
+
+<!--
+FIRST RENDER
+<ul class="users">
+	<% @users.each do |user| %>
+		<%= render user %>
+	<% end %>
+</ul> -->
+
+<!--SECOND RENDER-->
+<ul class="users">
+	<%= render @users %>
+</ul>
+
+<%= will_paginate %>
